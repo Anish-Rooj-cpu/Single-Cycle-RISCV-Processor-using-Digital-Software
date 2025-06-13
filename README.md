@@ -15,8 +15,9 @@ In this project I have designed and implented a Single-Cycle RISC-V Processor us
  - J-type: `jal`
 
 # Simulation 
- The Codes have been simulated in the EDA Playground and also they have been Synthesized in Vivado
- - Link of EDA Playground : https://edaplayground.com/x/XeZr
+ The Top Module or Top Block has been simulated inside the Digital Software.
+ - Link of EDA Playground to see the Verilog Codes of this Processor: https://edaplayground.com/x/XeZr
+ - Link to the Digital Software that has been used : https://github.com/hneemann/Digital
 
 # Testing and Verificiation 
  The processor has been tested with various complex Programs like Factorial Determinaition, Sum of N natrual numbers, Bubble Sort and Fibonacci Series Generator.
