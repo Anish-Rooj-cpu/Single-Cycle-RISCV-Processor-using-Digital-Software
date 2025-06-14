@@ -40,7 +40,7 @@
         </entry>
         <entry>
           <string>lastDataFile</string>
-          <file>E:\RISCV using Digital Software\test.hex</file>
+          <file>E:\RISCV Single Cycle Processor using Digital Software\Test Programs\test.hex</file>
         </entry>
         <entry>
           <string>autoReload</string>
@@ -264,7 +264,7 @@
           <string>rs1</string>
         </entry>
       </elementAttributes>
-      <pos x="680" y="680"/>
+      <pos x="760" y="680"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -278,7 +278,7 @@
           <string>rs2</string>
         </entry>
       </elementAttributes>
-      <pos x="680" y="700"/>
+      <pos x="760" y="700"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -292,7 +292,7 @@
           <string>rd</string>
         </entry>
       </elementAttributes>
-      <pos x="680" y="640"/>
+      <pos x="760" y="640"/>
     </visualElement>
     <visualElement>
       <elementName>controlUnit.dig</elementName>
@@ -1426,7 +1426,7 @@
           <string>clk</string>
         </entry>
       </elementAttributes>
-      <pos x="680" y="660"/>
+      <pos x="760" y="660"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -1636,7 +1636,7 @@
           <string>WriteData</string>
         </entry>
       </elementAttributes>
-      <pos x="680" y="600"/>
+      <pos x="760" y="600"/>
     </visualElement>
     <visualElement>
       <elementName>Splitter</elementName>
@@ -1803,7 +1803,7 @@
           <string>regWrite</string>
         </entry>
       </elementAttributes>
-      <pos x="680" y="620"/>
+      <pos x="760" y="620"/>
     </visualElement>
     <visualElement>
       <elementName>Out</elementName>
@@ -1877,6 +1877,10 @@
         <entry>
           <string>Bits</string>
           <int>32</int>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>hex</intFormat>
         </entry>
       </elementAttributes>
       <pos x="-200" y="1280"/>
@@ -1979,7 +1983,7 @@
           <string>rs1</string>
         </entry>
       </elementAttributes>
-      <pos x="440" y="1300"/>
+      <pos x="360" y="1300"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -1993,7 +1997,7 @@
           <string>rs2</string>
         </entry>
       </elementAttributes>
-      <pos x="360" y="1300"/>
+      <pos x="440" y="1300"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -2038,6 +2042,10 @@
           <string>Bits</string>
           <int>5</int>
         </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>decSigned</intFormat>
+        </entry>
       </elementAttributes>
       <pos x="280" y="1280"/>
     </visualElement>
@@ -2056,6 +2064,10 @@
           <string>Bits</string>
           <int>5</int>
         </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>decSigned</intFormat>
+        </entry>
       </elementAttributes>
       <pos x="360" y="1280"/>
     </visualElement>
@@ -2073,6 +2085,10 @@
         <entry>
           <string>Bits</string>
           <int>5</int>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>decSigned</intFormat>
         </entry>
       </elementAttributes>
       <pos x="440" y="1280"/>
@@ -2197,7 +2213,7 @@
           <string>RD1</string>
         </entry>
       </elementAttributes>
-      <pos x="680" y="1300"/>
+      <pos x="600" y="1300"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -2211,7 +2227,7 @@
           <string>RD2</string>
         </entry>
       </elementAttributes>
-      <pos x="600" y="1300"/>
+      <pos x="680" y="1300"/>
     </visualElement>
     <visualElement>
       <elementName>Out</elementName>
@@ -2740,12 +2756,12 @@
       <elementName>Rectangle</elementName>
       <elementAttributes>
         <entry>
-          <string>Label</string>
-          <string>DEBUGGING SECTION</string>
-        </entry>
-        <entry>
           <string>RectHeight</string>
           <int>46</int>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>DEBUGGING SECTION</string>
         </entry>
         <entry>
           <string>RectWidth</string>
@@ -2788,7 +2804,7 @@ addi x9, x0, 4
 jalr x0, x10, 4</string>
         </entry>
       </elementAttributes>
-      <pos x="540" y="1460"/>
+      <pos x="540" y="1400"/>
     </visualElement>
   </visualElements>
   <wires>
@@ -2797,7 +2813,7 @@ jalr x0, x10, 4</string>
       <p2 x="-60" y="640"/>
     </wire>
     <wire>
-      <p1 x="680" y="640"/>
+      <p1 x="760" y="640"/>
       <p2 x="800" y="640"/>
     </wire>
     <wire>
@@ -2877,7 +2893,7 @@ jalr x0, x10, 4</string>
       <p2 x="1900" y="660"/>
     </wire>
     <wire>
-      <p1 x="680" y="660"/>
+      <p1 x="760" y="660"/>
       <p2 x="800" y="660"/>
     </wire>
     <wire>
@@ -2977,7 +2993,7 @@ jalr x0, x10, 4</string>
       <p2 x="380" y="680"/>
     </wire>
     <wire>
-      <p1 x="680" y="680"/>
+      <p1 x="760" y="680"/>
       <p2 x="800" y="680"/>
     </wire>
     <wire>
@@ -3045,7 +3061,7 @@ jalr x0, x10, 4</string>
       <p2 x="1900" y="700"/>
     </wire>
     <wire>
-      <p1 x="680" y="700"/>
+      <p1 x="760" y="700"/>
       <p2 x="800" y="700"/>
     </wire>
     <wire>
@@ -3149,7 +3165,7 @@ jalr x0, x10, 4</string>
       <p2 x="960" y="600"/>
     </wire>
     <wire>
-      <p1 x="680" y="600"/>
+      <p1 x="760" y="600"/>
       <p2 x="800" y="600"/>
     </wire>
     <wire>
@@ -3229,7 +3245,7 @@ jalr x0, x10, 4</string>
       <p2 x="40" y="620"/>
     </wire>
     <wire>
-      <p1 x="680" y="620"/>
+      <p1 x="760" y="620"/>
       <p2 x="800" y="620"/>
     </wire>
     <wire>
@@ -3397,12 +3413,12 @@ jalr x0, x10, 4</string>
       <p2 x="40" y="1300"/>
     </wire>
     <wire>
-      <p1 x="680" y="1280"/>
-      <p2 x="680" y="1300"/>
-    </wire>
-    <wire>
       <p1 x="1960" y="300"/>
       <p2 x="1960" y="320"/>
+    </wire>
+    <wire>
+      <p1 x="680" y="1280"/>
+      <p2 x="680" y="1300"/>
     </wire>
     <wire>
       <p1 x="940" y="820"/>
@@ -3433,10 +3449,6 @@ jalr x0, x10, 4</string>
       <p2 x="180" y="1580"/>
     </wire>
     <wire>
-      <p1 x="440" y="1280"/>
-      <p2 x="440" y="1300"/>
-    </wire>
-    <wire>
       <p1 x="1080" y="840"/>
       <p2 x="1080" y="860"/>
     </wire>
@@ -3447,6 +3459,10 @@ jalr x0, x10, 4</string>
     <wire>
       <p1 x="1080" y="1220"/>
       <p2 x="1080" y="1240"/>
+    </wire>
+    <wire>
+      <p1 x="440" y="1280"/>
+      <p2 x="440" y="1300"/>
     </wire>
     <wire>
       <p1 x="1980" y="300"/>
@@ -3541,12 +3557,12 @@ jalr x0, x10, 4</string>
       <p2 x="1000" y="500"/>
     </wire>
     <wire>
-      <p1 x="360" y="1280"/>
-      <p2 x="360" y="1300"/>
-    </wire>
-    <wire>
       <p1 x="360" y="1560"/>
       <p2 x="360" y="1580"/>
+    </wire>
+    <wire>
+      <p1 x="360" y="1280"/>
+      <p2 x="360" y="1300"/>
     </wire>
     <wire>
       <p1 x="1900" y="300"/>
@@ -3573,12 +3589,12 @@ jalr x0, x10, 4</string>
       <p2 x="760" y="1300"/>
     </wire>
     <wire>
-      <p1 x="1020" y="1020"/>
-      <p2 x="1020" y="1100"/>
-    </wire>
-    <wire>
       <p1 x="380" y="1560"/>
       <p2 x="380" y="1580"/>
+    </wire>
+    <wire>
+      <p1 x="1020" y="1020"/>
+      <p2 x="1020" y="1100"/>
     </wire>
   </wires>
   <measurementOrdering/>
