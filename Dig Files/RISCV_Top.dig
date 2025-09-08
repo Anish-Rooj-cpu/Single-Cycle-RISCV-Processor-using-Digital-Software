@@ -30,15 +30,13 @@
         </entry>
         <entry>
           <string>Data</string>
-          <data>a00093,300113,ffb00193,100213,2082b3,40208333,4093b3,11a433,11b4b3
-,20c533,40d5b3,4041d633,20e6b3,20f733,ffe08793,60f813,40e893,f0c913
-,1a993,1ba13,109a93,10db13,4011db93,12345c37,10c97,10000d37,7b00d93
-,1bd2023,d2e03,500e93,500f13,400f93,1ee8463,1fe9463,1dfc463,1fed463
-,1dfe463,1fef463,8002ef,8367</data>
+          <data>10000113,500293,c000ef,13,ffdff06f,100413,82a3b3,38663,100313
+,8067,ff810113,112223,512023,fff28293,fddff0ef,12283,412083,810113
+,393,413,540863,6383b3,140413,ff5ff06f,38333,8067</data>
         </entry>
         <entry>
           <string>lastDataFile</string>
-          <file>E:\RISCV Single Cycle Processor using Digital Software\Test Programs\test.hex</file>
+          <file>E:\RISCV Single Cycle Processor using Digital Software\Test Programs\stack.hex</file>
         </entry>
       </elementAttributes>
       <pos x="220" y="280"/>
@@ -486,7 +484,7 @@
           <string>ALU</string>
         </entry>
       </elementAttributes>
-      <pos x="1200" y="380"/>
+      <pos x="1220" y="380"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -510,7 +508,7 @@
           <string>ALUControl</string>
         </entry>
       </elementAttributes>
-      <pos x="1180" y="420"/>
+      <pos x="1200" y="420"/>
     </visualElement>
     <visualElement>
       <elementName>D_FF_AS</elementName>
@@ -662,7 +660,7 @@
           <string>ALU_in2</string>
         </entry>
       </elementAttributes>
-      <pos x="1180" y="400"/>
+      <pos x="1200" y="400"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -676,7 +674,7 @@
           <string>RD1</string>
         </entry>
       </elementAttributes>
-      <pos x="1180" y="380"/>
+      <pos x="1200" y="380"/>
     </visualElement>
     <visualElement>
       <elementName>RAMDualPort</elementName>
@@ -694,7 +692,7 @@
           <int>32</int>
         </entry>
       </elementAttributes>
-      <pos x="1540" y="580"/>
+      <pos x="1340" y="540"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -704,7 +702,7 @@
           <string>Result</string>
         </entry>
       </elementAttributes>
-      <pos x="1340" y="400"/>
+      <pos x="1360" y="400"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -714,7 +712,7 @@
           <string>Zero</string>
         </entry>
       </elementAttributes>
-      <pos x="1340" y="380"/>
+      <pos x="1360" y="380"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -728,7 +726,7 @@
           <string>Result</string>
         </entry>
       </elementAttributes>
-      <pos x="1460" y="580"/>
+      <pos x="1260" y="540"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -742,7 +740,7 @@
           <string>RD2</string>
         </entry>
       </elementAttributes>
-      <pos x="1520" y="600"/>
+      <pos x="1320" y="560"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -756,7 +754,7 @@
           <string>MemWrite</string>
         </entry>
       </elementAttributes>
-      <pos x="1520" y="620"/>
+      <pos x="1320" y="580"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -770,7 +768,7 @@
           <string>MemRead</string>
         </entry>
       </elementAttributes>
-      <pos x="1520" y="660"/>
+      <pos x="1320" y="620"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -826,7 +824,7 @@
           <string>clk</string>
         </entry>
       </elementAttributes>
-      <pos x="1520" y="640"/>
+      <pos x="1320" y="600"/>
     </visualElement>
     <visualElement>
       <elementName>Multiplexer</elementName>
@@ -836,7 +834,7 @@
           <int>32</int>
         </entry>
       </elementAttributes>
-      <pos x="1540" y="720"/>
+      <pos x="1360" y="700"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -1506,7 +1504,7 @@
           <string>Result</string>
         </entry>
       </elementAttributes>
-      <pos x="1520" y="720"/>
+      <pos x="1340" y="700"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -1516,7 +1514,7 @@
           <string>ReadData</string>
         </entry>
       </elementAttributes>
-      <pos x="1620" y="620"/>
+      <pos x="1420" y="580"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -1530,7 +1528,7 @@
           <string>ReadData</string>
         </entry>
       </elementAttributes>
-      <pos x="1520" y="760"/>
+      <pos x="1340" y="740"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -1544,7 +1542,7 @@
           <string>MemtoReg</string>
         </entry>
       </elementAttributes>
-      <pos x="1560" y="780"/>
+      <pos x="1380" y="760"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -1554,7 +1552,7 @@
           <string>WriteData_from_mem</string>
         </entry>
       </elementAttributes>
-      <pos x="1600" y="740"/>
+      <pos x="1420" y="720"/>
     </visualElement>
     <visualElement>
       <elementName>Multiplexer</elementName>
@@ -1564,7 +1562,7 @@
           <int>32</int>
         </entry>
       </elementAttributes>
-      <pos x="1980" y="760"/>
+      <pos x="1780" y="620"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -1578,7 +1576,7 @@
           <string>WriteData_from_mem</string>
         </entry>
       </elementAttributes>
-      <pos x="1960" y="760"/>
+      <pos x="1760" y="620"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -1592,7 +1590,7 @@
           <string>WriteData_from_jal</string>
         </entry>
       </elementAttributes>
-      <pos x="1960" y="800"/>
+      <pos x="1760" y="660"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -1606,7 +1604,7 @@
           <string>write_jal</string>
         </entry>
       </elementAttributes>
-      <pos x="2000" y="820"/>
+      <pos x="1800" y="680"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -1616,7 +1614,7 @@
           <string>WriteData</string>
         </entry>
       </elementAttributes>
-      <pos x="2460" y="820"/>
+      <pos x="2260" y="680"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -1686,7 +1684,7 @@
           <string>9-2</string>
         </entry>
       </elementAttributes>
-      <pos x="1500" y="580"/>
+      <pos x="1300" y="540"/>
     </visualElement>
     <visualElement>
       <elementName>Splitter</elementName>
@@ -2775,56 +2773,6 @@
       <pos x="-20" y="1840"/>
     </visualElement>
     <visualElement>
-      <elementName>Text</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Description</string>
-          <string>Test Program
-addi x1, x0, 10      # x1 = 10
-addi x2, x0, 3       # x2 = 3
-addi x3, x0, -5      # x3 = -5
-addi x4, x0, 1       # x4 = 1 (used as shift amount)
-add   x5, x1, x2     # x5 = 10 + 3 = 13
-sub   x6, x1, x2     # x6 = 10 - 3 = 7
-sll   x7, x1, x4     # x7 = 10 &lt;&lt; 1 = 20///PROB
-slt   x8, x3, x1     # x8 = -5 &lt; 10 = 1
-sltu  x9, x3, x1     # x9 = unsigned(-5) &lt; 10 = 0
-xor   x10, x1, x2    # x10 = 10 ^ 3 = 9
-srl   x11, x1, x4    # x11 = 10 &gt;&gt; 1 = 5
-sra   x12, x3, x4    # x12 = -5 &gt;&gt;&gt; 1 = -3
-or    x13, x1, x2    # x13 = 10 | 3 = 11
-and   x14, x1, x2    # x14 = 10 &amp; 3 = 2
-addi  x15, x1, -2    # x15 = 10 + (-2) = 8
-andi  x16, x1, 6     # x16 = 10 &amp; 6 = 2
-ori   x17, x1, 4     # x17 = 10 | 4 = 14
-xori  x18, x1, 15    # x18 = 10 ^ 15 = 5
-slti  x19, x3, 0     # x19 = -5 &lt; 0 = 1
-sltiu x20, x3, 0     # x20 = unsigned(-5) &lt; 0 = 0
-slli  x21, x1, 1     # x21 = 10 &lt;&lt; 1 = 20
-srli  x22, x1, 1     # x22 = 10 &gt;&gt; 1 = 5
-srai  x23, x3, 1     # x23 = -5 &gt;&gt;&gt; 1 = -3
-lui   x24, 0x12345   # x24 = 0x12345000
-auipc x25, 0x10      # x25 = PC + 0x10000
-lui   x26, 0x10000   # x26 = 0x10000000 base addr
-addi  x27, x0, 123   # x27 = 123
-sw    x27, 0(x26)    # MEM[x26 + 0] = 123
-lw    x28, 0(x26)    # x28 = MEM[x26 + 0] = 123
-addi x29, x0, 5
-addi x30, x0, 5
-addi x31, x0, 4
-beq   x29, x30, 8     # PC += 8 if x29 == x30 (true)
-bne   x29, x31, 8     # PC += 8 if x29 != x31 (true)
-blt   x31, x29, 8     # PC += 8 if x31 &lt; x29 (true)
-bge   x29, x31, 8     # PC += 8 if x29 &gt;= x31 (true)
-bltu  x31, x29, 8     # unsigned x31 &lt; x29 (true)
-bgeu  x29, x31, 8     # unsigned x29 &gt;= x31 (true)
-jal   x5, 8           # x5 = PC + 4; jump to PC + 8
-jalr  x6, x1, 0       # x6 = PC + 4; jump to x1 (10)</string>
-        </entry>
-      </elementAttributes>
-      <pos x="260" y="1780"/>
-    </visualElement>
-    <visualElement>
       <elementName>Tunnel</elementName>
       <elementAttributes>
         <entry>
@@ -2892,7 +2840,7 @@ jalr  x6, x1, 0       # x6 = PC + 4; jump to x1 (10)</string>
           <int>32</int>
         </entry>
       </elementAttributes>
-      <pos x="2380" y="800"/>
+      <pos x="2180" y="660"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -2906,7 +2854,7 @@ jalr  x6, x1, 0       # x6 = PC + 4; jump to x1 (10)</string>
           <string>WriteData_from_lui</string>
         </entry>
       </elementAttributes>
-      <pos x="2360" y="840"/>
+      <pos x="2160" y="700"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -2920,7 +2868,7 @@ jalr  x6, x1, 0       # x6 = PC + 4; jump to x1 (10)</string>
           <string>LUI</string>
         </entry>
       </elementAttributes>
-      <pos x="2400" y="880"/>
+      <pos x="2200" y="740"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -2934,7 +2882,7 @@ jalr  x6, x1, 0       # x6 = PC + 4; jump to x1 (10)</string>
           <string>AUIPC</string>
         </entry>
       </elementAttributes>
-      <pos x="2220" y="880"/>
+      <pos x="2020" y="740"/>
     </visualElement>
     <visualElement>
       <elementName>Multiplexer</elementName>
@@ -2944,7 +2892,7 @@ jalr  x6, x1, 0       # x6 = PC + 4; jump to x1 (10)</string>
           <int>32</int>
         </entry>
       </elementAttributes>
-      <pos x="2200" y="780"/>
+      <pos x="2000" y="640"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -2958,7 +2906,7 @@ jalr  x6, x1, 0       # x6 = PC + 4; jump to x1 (10)</string>
           <string>WriteData_from_auipc</string>
         </entry>
       </elementAttributes>
-      <pos x="2180" y="820"/>
+      <pos x="1980" y="680"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -2983,12 +2931,12 @@ jalr  x6, x1, 0       # x6 = PC + 4; jump to x1 (10)</string>
       <elementName>DipSwitch</elementName>
       <elementAttributes>
         <entry>
-          <string>Label</string>
-          <string>Debug Mode</string>
-        </entry>
-        <entry>
           <string>dipDefault</string>
           <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>Debug Mode</string>
         </entry>
       </elementAttributes>
       <pos x="-220" y="2000"/>
@@ -2997,6 +2945,21 @@ jalr  x6, x1, 0       # x6 = PC + 4; jump to x1 (10)</string>
       <elementName>LED</elementName>
       <elementAttributes/>
       <pos x="-140" y="2000"/>
+    </visualElement>
+    <visualElement>
+      <elementName>GenericCode</elementName>
+      <elementAttributes>
+        <entry>
+          <string>generic</string>
+          <string>addi x1, x0, 5
+addi x2, x0, 4
+LOOP:
+    add x3, x1, x3
+    addi x2, x2, -1
+    bne x2, x0, LOOP</string>
+        </entry>
+      </elementAttributes>
+      <pos x="300" y="1840"/>
     </visualElement>
   </visualElements>
   <wires>
@@ -3009,8 +2972,8 @@ jalr  x6, x1, 0       # x6 = PC + 4; jump to x1 (10)</string>
       <p2 x="800" y="640"/>
     </wire>
     <wire>
-      <p1 x="1520" y="640"/>
-      <p2 x="1540" y="640"/>
+      <p1 x="1820" y="640"/>
+      <p2 x="2000" y="640"/>
     </wire>
     <wire>
       <p1 x="1200" y="1280"/>
@@ -3065,10 +3028,6 @@ jalr  x6, x1, 0       # x6 = PC + 4; jump to x1 (10)</string>
       <p2 x="280" y="140"/>
     </wire>
     <wire>
-      <p1 x="2020" y="780"/>
-      <p2 x="2200" y="780"/>
-    </wire>
-    <wire>
       <p1 x="880" y="1040"/>
       <p2 x="960" y="1040"/>
     </wire>
@@ -3081,16 +3040,16 @@ jalr  x6, x1, 0       # x6 = PC + 4; jump to x1 (10)</string>
       <p2 x="1520" y="1040"/>
     </wire>
     <wire>
-      <p1 x="1180" y="400"/>
-      <p2 x="1200" y="400"/>
+      <p1 x="1200" y="400"/>
+      <p2 x="1220" y="400"/>
     </wire>
     <wire>
       <p1 x="-360" y="400"/>
       <p2 x="-340" y="400"/>
     </wire>
     <wire>
-      <p1 x="1320" y="400"/>
-      <p2 x="1340" y="400"/>
+      <p1 x="1340" y="400"/>
+      <p2 x="1360" y="400"/>
     </wire>
     <wire>
       <p1 x="840" y="400"/>
@@ -3105,8 +3064,12 @@ jalr  x6, x1, 0       # x6 = PC + 4; jump to x1 (10)</string>
       <p2 x="800" y="660"/>
     </wire>
     <wire>
-      <p1 x="1520" y="660"/>
-      <p2 x="1540" y="660"/>
+      <p1 x="2040" y="660"/>
+      <p2 x="2180" y="660"/>
+    </wire>
+    <wire>
+      <p1 x="1760" y="660"/>
+      <p2 x="1780" y="660"/>
     </wire>
     <wire>
       <p1 x="-80" y="20"/>
@@ -3173,16 +3136,16 @@ jalr  x6, x1, 0       # x6 = PC + 4; jump to x1 (10)</string>
       <p2 x="500" y="540"/>
     </wire>
     <wire>
+      <p1 x="1260" y="540"/>
+      <p2 x="1300" y="540"/>
+    </wire>
+    <wire>
+      <p1 x="1320" y="540"/>
+      <p2 x="1340" y="540"/>
+    </wire>
+    <wire>
       <p1 x="160" y="160"/>
       <p2 x="180" y="160"/>
-    </wire>
-    <wire>
-      <p1 x="2240" y="800"/>
-      <p2 x="2380" y="800"/>
-    </wire>
-    <wire>
-      <p1 x="1960" y="800"/>
-      <p2 x="1980" y="800"/>
     </wire>
     <wire>
       <p1 x="1600" y="1060"/>
@@ -3205,8 +3168,8 @@ jalr  x6, x1, 0       # x6 = PC + 4; jump to x1 (10)</string>
       <p2 x="500" y="420"/>
     </wire>
     <wire>
-      <p1 x="1180" y="420"/>
-      <p2 x="1200" y="420"/>
+      <p1 x="1200" y="420"/>
+      <p2 x="1220" y="420"/>
     </wire>
     <wire>
       <p1 x="360" y="680"/>
@@ -3215,6 +3178,14 @@ jalr  x6, x1, 0       # x6 = PC + 4; jump to x1 (10)</string>
     <wire>
       <p1 x="760" y="680"/>
       <p2 x="800" y="680"/>
+    </wire>
+    <wire>
+      <p1 x="2220" y="680"/>
+      <p2 x="2260" y="680"/>
+    </wire>
+    <wire>
+      <p1 x="1980" y="680"/>
+      <p2 x="2000" y="680"/>
     </wire>
     <wire>
       <p1 x="80" y="40"/>
@@ -3261,20 +3232,16 @@ jalr  x6, x1, 0       # x6 = PC + 4; jump to x1 (10)</string>
       <p2 x="1240" y="1200"/>
     </wire>
     <wire>
+      <p1 x="1320" y="560"/>
+      <p2 x="1340" y="560"/>
+    </wire>
+    <wire>
       <p1 x="160" y="180"/>
       <p2 x="180" y="180"/>
     </wire>
     <wire>
       <p1 x="260" y="180"/>
       <p2 x="280" y="180"/>
-    </wire>
-    <wire>
-      <p1 x="2420" y="820"/>
-      <p2 x="2460" y="820"/>
-    </wire>
-    <wire>
-      <p1 x="2180" y="820"/>
-      <p2 x="2200" y="820"/>
     </wire>
     <wire>
       <p1 x="1420" y="1080"/>
@@ -3295,6 +3262,14 @@ jalr  x6, x1, 0       # x6 = PC + 4; jump to x1 (10)</string>
     <wire>
       <p1 x="500" y="700"/>
       <p2 x="520" y="700"/>
+    </wire>
+    <wire>
+      <p1 x="1340" y="700"/>
+      <p2 x="1360" y="700"/>
+    </wire>
+    <wire>
+      <p1 x="2160" y="700"/>
+      <p2 x="2180" y="700"/>
     </wire>
     <wire>
       <p1 x="520" y="700"/>
@@ -3337,12 +3312,12 @@ jalr  x6, x1, 0       # x6 = PC + 4; jump to x1 (10)</string>
       <p2 x="1120" y="1220"/>
     </wire>
     <wire>
-      <p1 x="1460" y="580"/>
-      <p2 x="1500" y="580"/>
+      <p1 x="1320" y="580"/>
+      <p2 x="1340" y="580"/>
     </wire>
     <wire>
-      <p1 x="1520" y="580"/>
-      <p2 x="1540" y="580"/>
+      <p1 x="1400" y="580"/>
+      <p2 x="1420" y="580"/>
     </wire>
     <wire>
       <p1 x="620" y="200"/>
@@ -3369,10 +3344,6 @@ jalr  x6, x1, 0       # x6 = PC + 4; jump to x1 (10)</string>
       <p2 x="1080" y="840"/>
     </wire>
     <wire>
-      <p1 x="2360" y="840"/>
-      <p2 x="2380" y="840"/>
-    </wire>
-    <wire>
       <p1 x="1020" y="1100"/>
       <p2 x="1120" y="1100"/>
     </wire>
@@ -3389,8 +3360,8 @@ jalr  x6, x1, 0       # x6 = PC + 4; jump to x1 (10)</string>
       <p2 x="40" y="720"/>
     </wire>
     <wire>
-      <p1 x="1520" y="720"/>
-      <p2 x="1540" y="720"/>
+      <p1 x="1400" y="720"/>
+      <p2 x="1420" y="720"/>
     </wire>
     <wire>
       <p1 x="1200" y="1360"/>
@@ -3417,6 +3388,10 @@ jalr  x6, x1, 0       # x6 = PC + 4; jump to x1 (10)</string>
       <p2 x="-220" y="340"/>
     </wire>
     <wire>
+      <p1 x="1320" y="600"/>
+      <p2 x="1340" y="600"/>
+    </wire>
+    <wire>
       <p1 x="880" y="600"/>
       <p2 x="960" y="600"/>
     </wire>
@@ -3431,10 +3406,6 @@ jalr  x6, x1, 0       # x6 = PC + 4; jump to x1 (10)</string>
     <wire>
       <p1 x="-80" y="600"/>
       <p2 x="-60" y="600"/>
-    </wire>
-    <wire>
-      <p1 x="1520" y="600"/>
-      <p2 x="1540" y="600"/>
     </wire>
     <wire>
       <p1 x="-240" y="1880"/>
@@ -3481,16 +3452,16 @@ jalr  x6, x1, 0       # x6 = PC + 4; jump to x1 (10)</string>
       <p2 x="1340" y="1120"/>
     </wire>
     <wire>
+      <p1 x="1340" y="740"/>
+      <p2 x="1360" y="740"/>
+    </wire>
+    <wire>
       <p1 x="-120" y="740"/>
       <p2 x="-100" y="740"/>
     </wire>
     <wire>
       <p1 x="120" y="740"/>
       <p2 x="140" y="740"/>
-    </wire>
-    <wire>
-      <p1 x="1580" y="740"/>
-      <p2 x="1600" y="740"/>
     </wire>
     <wire>
       <p1 x="520" y="740"/>
@@ -3513,6 +3484,10 @@ jalr  x6, x1, 0       # x6 = PC + 4; jump to x1 (10)</string>
       <p2 x="860" y="360"/>
     </wire>
     <wire>
+      <p1 x="1320" y="620"/>
+      <p2 x="1340" y="620"/>
+    </wire>
+    <wire>
       <p1 x="880" y="620"/>
       <p2 x="960" y="620"/>
     </wire>
@@ -3525,12 +3500,8 @@ jalr  x6, x1, 0       # x6 = PC + 4; jump to x1 (10)</string>
       <p2 x="800" y="620"/>
     </wire>
     <wire>
-      <p1 x="1520" y="620"/>
-      <p2 x="1540" y="620"/>
-    </wire>
-    <wire>
-      <p1 x="1600" y="620"/>
-      <p2 x="1620" y="620"/>
+      <p1 x="1760" y="620"/>
+      <p2 x="1780" y="620"/>
     </wire>
     <wire>
       <p1 x="920" y="1260"/>
@@ -3577,10 +3548,6 @@ jalr  x6, x1, 0       # x6 = PC + 4; jump to x1 (10)</string>
       <p2 x="1340" y="1140"/>
     </wire>
     <wire>
-      <p1 x="1960" y="760"/>
-      <p2 x="1980" y="760"/>
-    </wire>
-    <wire>
       <p1 x="-120" y="760"/>
       <p2 x="-100" y="760"/>
     </wire>
@@ -3593,16 +3560,12 @@ jalr  x6, x1, 0       # x6 = PC + 4; jump to x1 (10)</string>
       <p2 x="40" y="760"/>
     </wire>
     <wire>
-      <p1 x="1520" y="760"/>
-      <p2 x="1540" y="760"/>
+      <p1 x="1200" y="380"/>
+      <p2 x="1220" y="380"/>
     </wire>
     <wire>
-      <p1 x="1180" y="380"/>
-      <p2 x="1200" y="380"/>
-    </wire>
-    <wire>
-      <p1 x="1320" y="380"/>
-      <p2 x="1340" y="380"/>
+      <p1 x="1340" y="380"/>
+      <p2 x="1360" y="380"/>
     </wire>
     <wire>
       <p1 x="840" y="380"/>
@@ -3661,6 +3624,10 @@ jalr  x6, x1, 0       # x6 = PC + 4; jump to x1 (10)</string>
       <p2 x="1800" y="320"/>
     </wire>
     <wire>
+      <p1 x="1800" y="660"/>
+      <p2 x="1800" y="680"/>
+    </wire>
+    <wire>
       <p1 x="-140" y="1660"/>
       <p2 x="-140" y="1680"/>
     </wire>
@@ -3697,12 +3664,12 @@ jalr  x6, x1, 0       # x6 = PC + 4; jump to x1 (10)</string>
       <p2 x="20" y="1960"/>
     </wire>
     <wire>
-      <p1 x="1560" y="760"/>
-      <p2 x="1560" y="780"/>
-    </wire>
-    <wire>
       <p1 x="920" y="1060"/>
       <p2 x="920" y="1260"/>
+    </wire>
+    <wire>
+      <p1 x="2200" y="700"/>
+      <p2 x="2200" y="740"/>
     </wire>
     <wire>
       <p1 x="1820" y="300"/>
@@ -3739,10 +3706,6 @@ jalr  x6, x1, 0       # x6 = PC + 4; jump to x1 (10)</string>
     <wire>
       <p1 x="-300" y="1660"/>
       <p2 x="-300" y="1680"/>
-    </wire>
-    <wire>
-      <p1 x="2220" y="820"/>
-      <p2 x="2220" y="880"/>
     </wire>
     <wire>
       <p1 x="940" y="820"/>
@@ -3845,10 +3808,6 @@ jalr  x6, x1, 0       # x6 = PC + 4; jump to x1 (10)</string>
       <p2 x="80" y="980"/>
     </wire>
     <wire>
-      <p1 x="2000" y="800"/>
-      <p2 x="2000" y="820"/>
-    </wire>
-    <wire>
       <p1 x="2000" y="300"/>
       <p2 x="2000" y="320"/>
     </wire>
@@ -3889,12 +3848,16 @@ jalr  x6, x1, 0       # x6 = PC + 4; jump to x1 (10)</string>
       <p2 x="860" y="1100"/>
     </wire>
     <wire>
-      <p1 x="2400" y="840"/>
-      <p2 x="2400" y="880"/>
-    </wire>
-    <wire>
       <p1 x="-100" y="920"/>
       <p2 x="-100" y="980"/>
+    </wire>
+    <wire>
+      <p1 x="2020" y="680"/>
+      <p2 x="2020" y="740"/>
+    </wire>
+    <wire>
+      <p1 x="1380" y="740"/>
+      <p2 x="1380" y="760"/>
     </wire>
     <wire>
       <p1 x="100" y="1660"/>
