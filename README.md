@@ -13,6 +13,7 @@ In this project I have designed and implented a Single-Cycle RISC-V Processor us
  - S-type: `sw`  
  - B-type: `beq`, `bne`, `blt`, `bge`, `bltu`, `bgeu`  
  - J-type: `jal`
+ - M-extenstions: `mul`, `div`, `rem`
 
 # Simulation 
  The Top Module or Top Block has been simulated inside the Digital Software.
