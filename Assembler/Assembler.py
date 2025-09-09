@@ -23,8 +23,8 @@ import re
 # === Configuration: hardcoded paths (optional) ===
 # If these are non-empty strings and point to valid file/dir, they will be used.
 # Otherwise fall back to CLI args or interactive prompt.
-HARDCODE_INPUT_PATH = r"E:\Multi Cycle RISCV Processor\test.asm"
-HARDCODE_OUTPUT_PATH = r"E:\Multi Cycle RISCV Processor\test.v"
+HARDCODE_INPUT_PATH = r"E:\RISCV Single Cycle Processor using Digital Software\Asm Programs\pixel.asm"
+HARDCODE_OUTPUT_PATH = r"E:\RISCV Single Cycle Processor using Digital Software\test Programs\pixel.v"
 
 # === Instruction definitions ===
 R_TYPE = {
@@ -38,10 +38,16 @@ R_TYPE = {
     'sra':  {'funct7': 0b0100000, 'funct3': 0b101, 'opcode': 0b0110011},
     'or':   {'funct7': 0b0000000, 'funct3': 0b110, 'opcode': 0b0110011},
     'and':  {'funct7': 0b0000000, 'funct3': 0b111, 'opcode': 0b0110011},
+
+    # RV32M extension
+    'mul':  {'funct7': 0b0000001, 'funct3': 0b000, 'opcode': 0b0110011},
+    'div':  {'funct7': 0b0000001, 'funct3': 0b100, 'opcode': 0b0110011},
+    'rem':  {'funct7': 0b0000001, 'funct3': 0b110, 'opcode': 0b0110011},
 }
 
+
 I_TYPE = {
-    'addi':  {'opcode': 0b0010011, 'funct3': 0b000},
+    'addi':  {'opcode': 0b0010011, 'funct3': 0b000, 'funct7': 0b0000000},
     'andi':  {'opcode': 0b0010011, 'funct3': 0b111},
     'ori':   {'opcode': 0b0010011, 'funct3': 0b110},
     'xori':  {'opcode': 0b0010011, 'funct3': 0b100},
