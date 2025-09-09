@@ -776,7 +776,7 @@
         </entry>
         <entry>
           <string>Input Splitting</string>
-          <string>20,12</string>
+          <string>12,20</string>
         </entry>
         <entry>
           <string>Output Splitting</string>
@@ -961,7 +961,7 @@
           <int>12</int>
         </entry>
       </elementAttributes>
-      <pos x="860" y="-240"/>
+      <pos x="860" y="-320"/>
     </visualElement>
   </visualElements>
   <wires>
@@ -1298,16 +1298,16 @@
       <p2 x="-660" y="60"/>
     </wire>
     <wire>
+      <p1 x="860" y="-320"/>
+      <p2 x="900" y="-320"/>
+    </wire>
+    <wire>
       <p1 x="-1520" y="-320"/>
       <p2 x="-940" y="-320"/>
     </wire>
     <wire>
       <p1 x="1420" y="-320"/>
       <p2 x="1440" y="-320"/>
-    </wire>
-    <wire>
-      <p1 x="640" y="-320"/>
-      <p2 x="900" y="-320"/>
     </wire>
     <wire>
       <p1 x="920" y="-320"/>
@@ -1502,12 +1502,12 @@
       <p2 x="-440" y="620"/>
     </wire>
     <wire>
-      <p1 x="-1280" y="-240"/>
-      <p2 x="-940" y="-240"/>
+      <p1 x="640" y="-240"/>
+      <p2 x="900" y="-240"/>
     </wire>
     <wire>
-      <p1 x="860" y="-240"/>
-      <p2 x="900" y="-240"/>
+      <p1 x="-1280" y="-240"/>
+      <p2 x="-940" y="-240"/>
     </wire>
     <wire>
       <p1 x="680" y="-880"/>
@@ -1574,12 +1574,12 @@
       <p2 x="-940" y="380"/>
     </wire>
     <wire>
-      <p1 x="640" y="360"/>
-      <p2 x="640" y="480"/>
+      <p1 x="640" y="-740"/>
+      <p2 x="640" y="-240"/>
     </wire>
     <wire>
-      <p1 x="640" y="-740"/>
-      <p2 x="640" y="-320"/>
+      <p1 x="640" y="360"/>
+      <p2 x="640" y="480"/>
     </wire>
     <wire>
       <p1 x="640" y="480"/>
