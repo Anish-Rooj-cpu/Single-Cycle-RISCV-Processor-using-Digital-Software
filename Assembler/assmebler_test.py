@@ -33,7 +33,7 @@ R_TYPE = {
 
 
 I_TYPE = {
-    'addi':  {'opcode': 0b0010011, 'funct3': 0b000, 'funct7': 0b0000000},
+    'addi':  {'opcode': 0b0010011, 'funct3': 0b000},
     'andi':  {'opcode': 0b0010011, 'funct3': 0b111},
     'ori':   {'opcode': 0b0010011, 'funct3': 0b110},
     'xori':  {'opcode': 0b0010011, 'funct3': 0b100},
@@ -105,6 +105,7 @@ def encode_i_type(mnemonic, rd, rs1, imm):
     info = I_TYPE[mnemonic]
     funct3 = info['funct3'] & 0x7
     opcode = info['opcode'] & 0x7F
+    # This handles 12-bit 2's complement
     imm12 = imm & 0xFFF if imm >= 0 else (imm + (1 << 12)) & 0xFFF
     return (imm12 << 20) | ((rs1 & 0x1F) << 15) | (funct3 << 12) | ((rd & 0x1F) << 7) | opcode
 
@@ -120,7 +121,8 @@ def encode_s_type(mnemonic, rs2, rs1, imm):
     info = S_TYPE[mnemonic]
     funct3 = info['funct3'] & 0x7
     opcode = info['opcode'] & 0x7F
-    imm12 = imm & 0xFFF
+    # FIX: Handle 12-bit 2's complement for negative immediates
+    imm12 = imm & 0xFFF if imm >= 0 else (imm + (1 << 12)) & 0xFFF
     imm11_5 = (imm12 >> 5) & 0x7F
     imm4_0  = imm12 & 0x1F
     return (imm11_5 << 25) | ((rs2 & 0x1F) << 20) | ((rs1 & 0x1F) << 15) | (funct3 << 12) | (imm4_0 << 7) | opcode
@@ -130,6 +132,7 @@ def encode_b_type(mnemonic, rs1, rs2, imm):
     funct3 = info['funct3'] & 0x7
     opcode = info['opcode'] & 0x7F
     # imm is byte offset (can be negative). Must be multiple of 2; lower bit always zero in encoding.
+    # This correctly handles 13-bit 2's complement
     imm13 = imm & 0x1FFF if imm >= 0 else (imm + (1 << 13)) & 0x1FFF
     bit12 = (imm13 >> 12) & 0x1
     bits10_5 = (imm13 >> 5) & 0x3F
@@ -145,10 +148,15 @@ def encode_u_type(mnemonic, rd, imm):
 
 def encode_j_type(mnemonic, rd, imm):
     info = J_TYPE[mnemonic]
-    imm20 = (imm >> 20) & 0x1
-    imm10_1 = (imm >> 1) & 0x3FF
-    imm11 = (imm >> 11) & 0x1
-    imm19_12 = (imm >> 12) & 0xFF
+    # FIX: Handle 21-bit 2's complement for negative jump offsets
+    # (imm is 21 bits, but bit 0 is always 0 and not encoded)
+    imm21 = imm & 0x1FFFFF if imm >= 0 else (imm + (1 << 21)) & 0x1FFFFF
+    
+    imm20 = (imm21 >> 20) & 0x1      # bit 20
+    imm10_1 = (imm21 >> 1) & 0x3FF   # bits 10:1
+    imm11 = (imm21 >> 11) & 0x1    # bit 11
+    imm19_12 = (imm21 >> 12) & 0xFF  # bits 19:12
+    
     return (imm20 << 31) | (imm10_1 << 21) | (imm11 << 20) | (imm19_12 << 12) | \
         ((rd & 0x1F) << 7) | (info['opcode'] & 0x7F)
 
@@ -166,7 +174,7 @@ def prompt_for_path(prompt_msg, must_exist=False, default=None):
             path = resp if resp else default
         else:
             path = input(f"{prompt_msg}: ").strip()
-        # Strip quotes if any
+        # Strip quotes if any (from user input)
         if (path.startswith('"') and path.endswith('"')) or (path.startswith("'") and path.endswith("'")):
             path = path[1:-1]
         path = os.path.expanduser(path)
@@ -185,8 +193,8 @@ def prompt_for_path(prompt_msg, must_exist=False, default=None):
 def write_verilog_memory_file(output_path, machine_words):
     """
     Write lines like:
-       memory[0] = 32'hXXXXXXXX;
-       memory[1] = 32'hYYYYYYYY;
+        memory[0] = 32'hXXXXXXXX;
+        memory[1] = 32'hYYYYYYYY;
     """
     try:
         with open(output_path, 'w') as f:
@@ -273,15 +281,16 @@ def updated_assemble(asm_lines):
                 word = encode_r_type(mnemonic, rd, rs1, rs2)
 
             elif mnemonic in I_TYPE:
-                if mnemonic == 'lw':
-                    # Expect: lw rd, imm(rs1) or tokens: ['lw','rd','imm','rs1']
+                # FIX: 'jalr' uses the same 'imm(rs1)' syntax as 'lw'
+                if mnemonic == 'lw' or mnemonic == 'jalr':
+                    # Expect: lw rd, imm(rs1) or jalr rd, imm(rs1)
                     # After split: tokens[1]=rd, tokens[2]=imm, tokens[3]=rs1
                     if len(tokens) != 4:
-                        raise ValueError(f"Invalid lw syntax on line {lineno}: '{inst_line}'")
+                        raise ValueError(f"Invalid {mnemonic} syntax on line {lineno}: '{inst_line}'. Expected '{mnemonic} rd, imm(rs1)'")
                     rd = parse_register(tokens[1])
                     imm = parse_immediate(tokens[2])
                     rs1 = parse_register(tokens[3])
-                    word = encode_i_type('lw', rd, rs1, imm)
+                    word = encode_i_type(mnemonic, rd, rs1, imm)
                 elif mnemonic in ('slli', 'srli', 'srai'):
                     # Expect: mnemonic rd, rs1, shamt
                     if len(tokens) != 4:
@@ -293,13 +302,7 @@ def updated_assemble(asm_lines):
                     if shamt < 0 or shamt > 31:
                         raise ValueError(f"Shift amount out of range 0..31: {shamt}")
                     word = encode_i_shift_type(mnemonic, rd, rs1, shamt)
-                elif mnemonic == 'jalr':
-                    if len(tokens) != 4:
-                        raise ValueError(f"I-type '{mnemonic}' expects 3 operands")
-                    rd = parse_register(tokens[1])
-                    rs1 = parse_register(tokens[2])
-                    imm = parse_immediate(tokens[3])
-                    word = encode_i_type(mnemonic, rd, rs1, imm)
+                # FIX: Removed separate 'jalr' block which had wrong syntax
                 else:
                     # Other I-type arithmetic: addi, andi, ori, xori, slti, sltiu
                     if len(tokens) != 4:
@@ -381,7 +384,8 @@ def main():
     asm_path = None
     # 1. HARDCODE_INPUT_PATH if valid file
     if HARDCODE_INPUT_PATH:
-        p = os.path.expanduser(HARDCODE_INPUT_PATH.strip('"').strip("'"))
+        # FIX: Don't strip quotes from hardcoded variable
+        p = os.path.expanduser(HARDCODE_INPUT_PATH)
         if os.path.isfile(p):
             asm_path = p
         else:
@@ -400,15 +404,16 @@ def main():
 
     # Determine output path (Verilog)
     out_path = None
-    # HARDCODE_OUTPUT_PATH if its directory exists
+    # 1. HARDCODE_OUTPUT_PATH if its directory exists
     if HARDCODE_OUTPUT_PATH:
-        p = os.path.expanduser(HARDCODE_OUTPUT_PATH.strip('"').strip("'"))
+        # FIX: Don't strip quotes from hardcoded variable
+        p = os.path.expanduser(HARDCODE_OUTPUT_PATH)
         dirn = os.path.dirname(p) or '.'
         if os.path.isdir(dirn):
             out_path = p
         else:
             print(f"Warning: HARDCODE_OUTPUT_PATH directory '{dirn}' not exist. Ignoring hardcode.", file=sys.stderr)
-    # CLI arg
+    # 2. CLI arg
     if out_path is None and args.output:
         p = os.path.expanduser(args.output.strip('"').strip("'"))
         dirn = os.path.dirname(p) or '.'
@@ -416,7 +421,7 @@ def main():
             out_path = p
         else:
             print(f"Warning: directory for output '{dirn}' does not exist. Will prompt.", file=sys.stderr)
-    # Prompt if still None
+    # 3. Prompt if still None
     if out_path is None:
         default_out = os.path.splitext(asm_path)[0] + "_mem.v"
         out_path = prompt_for_path("Enter path to output Verilog memory file", must_exist=False, default=default_out)
@@ -425,7 +430,8 @@ def main():
     hex_out_path = None
     # 1. HARDCODE_HEX_PATH if valid directory
     if HARDCODE_HEX_PATH:
-        p = os.path.expanduser(HARDCODE_HEX_PATH.strip('"').strip("'"))
+        # FIX: Don't strip quotes from hardcoded variable
+        p = os.path.expanduser(HARDCODE_HEX_PATH)
         dirn = os.path.dirname(p) or '.'
         if os.path.isdir(dirn):
             hex_out_path = p
