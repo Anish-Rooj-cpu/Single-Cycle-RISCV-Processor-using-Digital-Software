@@ -1,0 +1,18 @@
+flowchart LR
+    A[Start: Write C Code - main.c] --> B[Preprocessing - include, define]
+    B --> C[Compilation - C to Assembly]
+    C --> D[Assembly - Assembly to Object Code]
+    D --> E[Linking - Object Files + Libraries]
+    E --> F[Executable File - a.out or exe]
+    F --> G[Loaded into Memory by OS]
+    G --> H[Processor Starts Execution]
+    H --> I[Fetch, Decode, Execute Cycle]
+    I --> J[Program Terminates - return 0]
+
+    subgraph Compilation_Steps
+        B --> C --> D
+    end
+
+    subgraph Execution
+        G --> H --> I
+    end
